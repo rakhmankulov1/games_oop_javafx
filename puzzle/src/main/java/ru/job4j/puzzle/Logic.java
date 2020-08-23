@@ -31,7 +31,7 @@ public class Logic {
         return rst;
     }
 
-    public boolean isFree(Cell... cells) {
+    public boolean isFree(Cell ... cells) {
         boolean result = cells.length > 0;
         for (Cell cell : cells) {
             if (findBy(cell) != -1) {
