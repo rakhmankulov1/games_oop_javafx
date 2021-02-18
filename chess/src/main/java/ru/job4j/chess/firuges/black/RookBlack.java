@@ -1,5 +1,6 @@
 package ru.job4j.chess.firuges.black;
 
+import ru.job4j.chess.ImpossibleMoveException;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
@@ -19,6 +20,15 @@ public class RookBlack implements Figure {
     @Override
     public Cell position() {
         return position;
+    }
+
+
+
+    @Override
+    public String icon() {
+        return String.format(
+                "%s.png", getClass().getSimpleName()
+        );
     }
 
     @Override

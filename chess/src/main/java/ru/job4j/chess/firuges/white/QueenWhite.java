@@ -1,5 +1,6 @@
 package ru.job4j.chess.firuges.white;
 
+import ru.job4j.chess.ImpossibleMoveException;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
@@ -29,7 +30,16 @@ public class QueenWhite implements Figure {
     }
 
     @Override
+    public String icon() {
+        return String.format(
+                "%s.png", getClass().getSimpleName()
+        );
+    }
+
+
+    @Override
     public Figure copy(Cell dest) {
         return new QueenWhite(dest);
+
     }
 }
